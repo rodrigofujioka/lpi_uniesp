@@ -24,7 +24,7 @@ public class Q6 {
                 ++totalAlunosAprovados;
             }
         }
-
+        System.out.println("Total Alunos" );
 
     }
 }
