@@ -20,4 +20,22 @@ public class ManipulaArquivo {
             e.printStackTrace();
         }
     }
+
+    public static void lerDados(){
+        FileInputStream arq;
+        int letra = 0;
+        try {
+            arq = new FileInputStream("dados.dat");
+            while(letra!=-1){
+                letra = arq.read();
+                System.out.println(letra);
+            }
+            arq.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
