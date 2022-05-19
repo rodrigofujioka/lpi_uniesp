@@ -1,9 +1,6 @@
 package br.uniesp.poo.serializacao;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class ManipulaArquivo {
 
@@ -35,6 +32,32 @@ public class ManipulaArquivo {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+
+    public static void lerDadosTxt(){
+        FileReader in = null;
+
+        try {
+            in = new FileReader("dados.txt");
+            int c;
+            while((c = in.read())!=1){
+                System.out.println((char)c);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        finally {
+            if(in!=null){
+                try {
+                    in.close();
+                } catch (IOException e) {
+                e.printStackTrace();
+            }
+            }
         }
     }
 
