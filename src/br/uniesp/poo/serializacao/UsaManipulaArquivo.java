@@ -8,7 +8,11 @@ public class UsaManipulaArquivo {
         System.out.println("Dados Gravados");
         System.out.println("Exibindo dados");
         ManipulaArquivo.lerDados();
+        //crie um arquivo txt na raiz do projeto com qualquer
+        //conteúdo e que tenha o nome dados.txt
 
+        ManipulaArquivo.escreverDadosTxt();
+        ManipulaArquivo.lerDadosTxt();
     }
 
 }

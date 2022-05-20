@@ -61,4 +61,23 @@ public class ManipulaArquivo {
         }
     }
 
+
+    public static void escreverDadosTxt(){
+        FileWriter out = null;
+        int contLetra = 0;
+        String texto = "Um texto para trabalhar";
+
+        try {
+            out = new FileWriter("dados.txt");
+            while(contLetra < texto.length()){
+                out.write(texto.charAt(contLetra));
+                contLetra++;
+            }
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 }
